@@ -8,23 +8,24 @@ function handleClick(e) {
 /* End Given Code, don't edit above here...*/
 
 function greet(time_string) {
+  let timeparts = time_string.split()
+  let string = ''
   if (parseInt(timeparts[0]) < 17) {
-    let string = 'Good Afternoon'
+     string = 'Good Afternoon'
     } 
-  let timeparts = timestring.split()
   if (parseInt(timeparts[0]) < 12) {
-  let string = 'Good Morning'
+   string = 'Good Morning'
   }
     if (parseInt(timeparts[0]) > 17) {
-      let string = 'Good Evening'
+       string = 'Good Evening'
       }
       return string
 }
 
-function displayMessage(textual){
-  box = document.getElementById('time')
-  box.textContent(textual)
-
+function displayMessage(textual="TEST") {
+  let content = document.getElementById('greeting')
+  content.innerText = textual
+return content
 }
 
 /* Write your implementation of greet() */
